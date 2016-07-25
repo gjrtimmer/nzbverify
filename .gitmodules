@@ -1,3 +1,6 @@
 [submodule "vendor/github.com/cheggaaa/pb"]
 	path = vendor/github.com/cheggaaa/pb
 	url = https://github.com/cheggaaa/pb.git
+[submodule "vendor/github.com/GJRTimmer/nzb"]
+	path = vendor/github.com/GJRTimmer/nzb
+	url = https://github.com/GJRTimmer/nzb.git
