@@ -4,3 +4,6 @@
 [submodule "vendor/github.com/GJRTimmer/nzb"]
 	path = vendor/github.com/GJRTimmer/nzb
 	url = https://github.com/GJRTimmer/nzb.git
+[submodule "vendor/github.com/GJRTimmer/nntp"]
+	path = vendor/github.com/GJRTimmer/nntp
+	url = https://github.com/GJRTimmer/nntp.git
