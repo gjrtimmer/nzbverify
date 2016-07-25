@@ -39,12 +39,12 @@ func main() {
 
 	flag.Parse()
 
-    if len(&nzbFile) < 1 {
+    if len(nzbFile) < 1 {
         fmt.Println("No NZB file provided.")
         os.Exit(1)
     }
 
-    if len(&host) < 1 {
+    if len(host) < 1 {
         fmt.Println("No NNTP host provided.")
         os.Exit(2)
     }
