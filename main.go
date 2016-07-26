@@ -33,11 +33,8 @@ func init() {
     flag.StringVar(&username, "user", "", "NNTP Username")
     flag.StringVar(&password, "pass", "", "NNTP Password")
     flag.IntVar(&maxConn, "max", 8, "Max connections")
-}
 
-func main() {
-
-	flag.Parse()
+    flag.Parse()
 
     if len(nzbFile) < 1 {
         fmt.Println("No NZB file provided.")
@@ -48,6 +45,11 @@ func main() {
         fmt.Println("No NNTP host provided.")
         os.Exit(2)
     }
+}
+
+func main() {
+
+	
 
     nFile, err := os.Open(nzbFile)
     defer nFile.Close()
