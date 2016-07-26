@@ -171,7 +171,7 @@ func main() {
 }
 
 func newWork(chunks *nzb.Chunks, queue chan *nntp.Request) {
-    c := chunks.GetChunk()
+    c := chunks.GetNext()
     if c != nil {
         req := nntp.NewRequest(c.Segment.ID, c.Groups, nntp.CHECK)
         queue <- req
