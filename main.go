@@ -5,6 +5,7 @@ import (
     "fmt"
     "os"
     "path/filepath"
+    "runtime"
     "sync"
     "time"
 
@@ -14,18 +15,22 @@ import (
 )
 
 var (
-    nzbFile string
+    // Application
+    maxCPU int
 
+    // Server
     host string
     port uint
     tls bool
     username string
     password string
-
     maxConn int
+
+    nzbFile string
 )
 
 func init() {
+    flag.IntVar(&maxCPU, "cpu", 4, "Max CPU's, defaults to 4")
     flag.StringVar(&nzbFile, "nzb", "", "NZB File")
     flag.StringVar(&host, "host", "", "NNTP Host")
     flag.UintVar(&port, "port", 119, "NNTP Port")
@@ -49,7 +54,8 @@ func init() {
 
 func main() {
 
-	
+	// Program can run with multiple CPU's
+    runtime.GOMAXPROCS(maxCPU)
 
     nFile, err := os.Open(nzbFile)
     defer nFile.Close()
