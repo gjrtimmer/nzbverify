@@ -120,11 +120,6 @@ func main() {
                 bar.Increment()
 
             case <- completionTicker.C:
-                /*
-                go func(available int, total int) {
-                    fmt.Printf("Segments Available [%8d/%d] %6.2f%% \n", available, total, (float64(available) / float64(total)) * 100)
-                }(available, chunks.Total)
-                */
                 if chunks.Marker == chunks.Total {
                     // Completed
                     //fmt.Printf("Segments Available [%8d/%d] %6.2f%% \n", available, chunks.Total, (float64(available) / float64(chunks.Total)) * 100)
