@@ -129,8 +129,6 @@ func main() {
 
             case <- completionTicker.C:
                 if chunks.Marker == chunks.Total {
-                    // Completed
-                    //fmt.Printf("Segments Available [%8d/%d] %6.2f%% \n", available, chunks.Total, (float64(available) / float64(chunks.Total)) * 100)
                     bar.FinishPrint("")
                     return
                 }
