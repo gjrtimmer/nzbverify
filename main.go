@@ -178,4 +178,4 @@ func newWork(chunks *nzb.Chunks, queue chan *nntp.Request) {
     }
 }
 
-// NNTP
+// EOF
